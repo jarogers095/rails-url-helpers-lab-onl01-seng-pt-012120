@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
   
   def edit
     if @student.active == true
-      @student.active = false
+      @student.update()
     else
       @student.active = true
     end
