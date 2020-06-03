@@ -10,9 +10,9 @@ class StudentsController < ApplicationController
   
   def edit
     if @student.active == true
-      @student.update()
+      @student.update(active: false)
     else
-      @student.active = true
+      @student.update(active: true)
     end
     redirect_to student_path(@student)
   end
